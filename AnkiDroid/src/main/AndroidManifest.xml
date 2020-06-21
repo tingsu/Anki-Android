@@ -328,6 +328,13 @@
             android:exported="true" >
             <meta-data android:name="com.ichi2.anki.provider.spec" android:value="2" />
         </provider>
+
+        <receiver android:name=".JacocoInstrument.SMSInstrumentedReceiver">
+            <intent-filter>
+                <action android:name="edu.gatech.m3.emma.COLLECT_COVERAGE" />
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>
